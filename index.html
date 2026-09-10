@@ -24,42 +24,19 @@
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      color:var(--ink);
-      background:var(--paper);
-      font-family:Arial,Helvetica,sans-serif;
-      font-size:16px;
-      line-height:1.55;
-    }
+    body{margin:0;color:var(--ink);background:var(--paper);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55}
     a{color:inherit;text-decoration:none}
     a:hover{text-decoration:underline;text-underline-offset:4px}
-    .skip{position:absolute;left:-9999px}
-    .skip:focus{left:18px;top:18px;background:#fff;padding:10px 14px;z-index:99}
+    .skip{position:absolute;left:-9999px}.skip:focus{left:18px;top:18px;background:#fff;padding:10px 14px;z-index:99}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 34px}
     header{border-bottom:1px solid var(--line)}
-    .topbar{
-      min-height:92px;
-      display:grid;
-      grid-template-columns:1fr auto;
-      gap:26px;
-      align-items:center;
-    }
+    .topbar{min-height:92px;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center}
     .identity{display:flex;align-items:center;gap:18px}
-    .monogram{
-      width:50px;height:50px;border:1px solid var(--ink);
-      display:grid;place-items:center;font-weight:700;letter-spacing:.08em;
-    }
+    .monogram{width:50px;height:50px;border:1px solid var(--ink);display:grid;place-items:center;font-weight:700;letter-spacing:.08em}
     .identity-copy strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:19px;font-weight:400}
     .identity-copy span{display:block;margin-top:2px;font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
-    nav{display:flex;gap:24px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;justify-content:flex-end}
-    .intro{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) 280px;
-      gap:72px;
-      padding:54px 0 76px;
-      border-bottom:1px solid var(--line);
-    }
+    nav{display:flex;gap:22px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;flex-wrap:wrap;justify-content:flex-end}
+    .intro{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:72px;padding:54px 0 76px;border-bottom:1px solid var(--line)}
     .nameblock{margin-bottom:64px}
     .nameblock h1{font-family:Georgia,'Times New Roman',serif;font-size:42px;font-weight:400;line-height:1.05;margin:0 0 14px}
     .nameblock p{margin:2px 0;color:var(--muted)}
@@ -67,8 +44,7 @@
     .hero h2{font-family:Georgia,'Times New Roman',serif;font-size:70px;line-height:.98;font-weight:400;letter-spacing:-.035em;margin:0 0 24px;max-width:760px}
     .hero .lead{font-family:Georgia,'Times New Roman',serif;font-size:24px;line-height:1.45;max-width:760px;margin:0 0 22px}
     .hero .bodycopy{max-width:760px;color:#393733;font-size:17px}
-    .aside{padding-top:8px}
-    .portrait{width:100%;aspect-ratio:1/1;object-fit:cover;border:1px solid var(--line);display:block;background:#ddd}
+    .aside{padding-top:8px}.portrait{width:100%;aspect-ratio:1/1;object-fit:cover;border:1px solid var(--line);display:block;background:#ddd}
     .quicklinks{border-top:1px solid var(--ink);margin-top:20px;padding-top:14px;display:grid;gap:7px;font-size:14px}
     .location{color:var(--muted);margin-top:10px;font-size:13px}
     section{padding:74px 0;border-bottom:1px solid var(--line)}
@@ -78,7 +54,7 @@
     .section-sub{margin:8px 0 0 129px;color:var(--muted);max-width:680px}
     .research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink)}
     .research-card{padding:28px 30px 10px 0;min-height:220px}
-    .research-card+ .research-card{border-left:1px solid var(--line);padding-left:30px}
+    .research-card+.research-card{border-left:1px solid var(--line);padding-left:30px}
     .roman{font-family:Georgia,'Times New Roman',serif;font-size:17px;color:var(--red);margin-bottom:12px}
     .research-card h3{font-family:Georgia,'Times New Roman',serif;font-size:26px;line-height:1.12;font-weight:400;margin:0 0 14px}
     .research-card p{color:#4e4a44;margin:0}
@@ -87,125 +63,46 @@
     .paper-year{font-family:Georgia,'Times New Roman',serif;font-size:18px}
     .status{display:block;color:var(--red);font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-top:5px}
     .paper-main h3{font-family:Georgia,'Times New Roman',serif;font-size:27px;line-height:1.18;font-weight:400;margin:0 0 8px}
-    .authors{font-size:14px;margin-bottom:10px}
-    .paper-main p{margin:0;color:#4e4a44}
-    .paper-meta{font-size:13px;color:var(--muted);text-align:right}
-    .paper-meta a{display:block;margin-top:12px;color:var(--ink);text-decoration:underline;text-underline-offset:4px}
-    .background{display:grid;grid-template-columns:1.3fr .9fr;gap:72px;border-top:1px solid var(--ink);padding-top:28px}
+    .authors{font-size:14px;margin-bottom:10px}.paper-main p{margin:0;color:#4e4a44}
+    .paper-meta{font-size:13px;color:var(--muted);text-align:right}.paper-meta a{display:block;margin-top:12px;color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+    .background{display:grid;grid-template-columns:1fr;gap:34px;border-top:1px solid var(--ink);padding-top:28px}
+    .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--ink)}
+    .service-entry{padding:28px 32px 18px 0;min-height:150px}
+    .service-entry+.service-entry{border-left:1px solid var(--line);padding-left:32px}
     .group-title{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:18px}
-    .entry{padding:0 0 22px;margin-bottom:22px;border-bottom:1px solid var(--line)}
-    .entry:last-child{border-bottom:0}
-    .entry strong{font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:400;display:block;margin-bottom:4px}
-    .entry p{margin:2px 0;color:#4e4a44}
+    .entry{padding:0 0 22px;margin-bottom:22px;border-bottom:1px solid var(--line)}.entry:last-child{border-bottom:0}
+    .entry strong,.service-entry strong{font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:400;display:block;margin-bottom:4px}
+    .entry p,.service-entry p{margin:2px 0;color:#4e4a44}
     .gpa{display:inline-block;margin-top:7px;font-size:13px;font-weight:700;color:var(--red)}
     .coursework{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
     .course-list{display:grid;grid-template-columns:1fr 1fr;gap:7px 24px;margin-top:12px;font-size:14px}
-    footer{padding:26px 0 40px;font-size:13px;color:var(--muted)}
-    .foot{display:flex;justify-content:space-between;gap:20px;align-items:center}
-    .back{text-transform:uppercase;letter-spacing:.1em;font-size:11px}
-    @media(max-width:880px){
-      .topbar{grid-template-columns:1fr}.topbar nav{justify-content:flex-start;padding-bottom:20px}
-      .intro{grid-template-columns:1fr;gap:38px}.aside{max-width:310px}.hero h2{font-size:56px}
-      .research-grid{grid-template-columns:1fr}.research-card+.research-card{border-left:0;border-top:1px solid var(--line);padding-left:0}
-      .paper-row{grid-template-columns:80px 1fr}.paper-meta{grid-column:2;text-align:left}
-      .background{grid-template-columns:1fr}.section-sub{margin-left:0}.course-list{grid-template-columns:1fr}
-    }
-    @media(max-width:560px){
-      .wrap{padding:0 20px}.hero h2{font-size:43px}.hero .lead{font-size:21px}.nameblock h1{font-size:34px}.intro{padding-top:38px}
-      .section-head{grid-template-columns:60px 1fr}.paper-row{grid-template-columns:1fr}.paper-meta{grid-column:1}.section-head h2{font-size:31px}
-      .foot{align-items:flex-start;flex-direction:column}
-    }
+    footer{padding:26px 0 40px;font-size:13px;color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.back{text-transform:uppercase;letter-spacing:.1em;font-size:11px}
+    @media(max-width:880px){.topbar{grid-template-columns:1fr}.topbar nav{justify-content:flex-start;padding-bottom:20px}.intro{grid-template-columns:1fr;gap:38px}.aside{max-width:310px}.hero h2{font-size:56px}.research-grid,.service-grid{grid-template-columns:1fr}.research-card+.research-card,.service-entry+.service-entry{border-left:0;border-top:1px solid var(--line);padding-left:0}.paper-row{grid-template-columns:80px 1fr}.paper-meta{grid-column:2;text-align:left}.section-sub{margin-left:0}.course-list{grid-template-columns:1fr}}
+    @media(max-width:560px){.wrap{padding:0 20px}.hero h2{font-size:43px}.hero .lead{font-size:21px}.nameblock h1{font-size:34px}.intro{padding-top:38px}.section-head{grid-template-columns:60px 1fr}.paper-row{grid-template-columns:1fr}.paper-meta{grid-column:1}.section-head h2{font-size:31px}.foot{align-items:flex-start;flex-direction:column}}
   </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Shalini Sushri","url":"https://ssushri3.github.io/","image":"https://ssushri3.github.io/profile.svg","jobTitle":"Computer Science Ph.D. Student","affiliation":{"@type":"CollegeOrUniversity","name":"Georgia Institute of Technology"},"sameAs":["https://github.com/ssushri3","https://www.linkedin.com/in/shalinisushri","https://openreview.net/profile?id=~Shalini_Sushri1"],"knowsAbout":["Interpretable machine learning","Structured policy representations","Hierarchical reinforcement learning","Vision-language-action models","Embodied AI"]}
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Shalini Sushri","url":"https://ssushri3.github.io/","image":"https://ssushri3.github.io/profile.svg","jobTitle":"Computer Science Ph.D. Student","affiliation":{"@type":"CollegeOrUniversity","name":"Georgia Institute of Technology"},"sameAs":["https://github.com/ssushri3","https://www.linkedin.com/in/shalinisushri","https://openreview.net/profile?id=~Shalini_Sushri1"],"knowsAbout":["Interpretable machine learning","Structured policy representations","Hierarchical reinforcement learning","Vision-language-action models","Embodied AI"]}</script>
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
-<header id="top">
-  <div class="wrap topbar">
-    <div class="identity">
-      <a class="monogram" href="#top" aria-label="Shalini Sushri home">SS</a>
-      <div class="identity-copy"><strong>Shalini Sushri</strong><span>Georgia Tech</span></div>
-    </div>
-    <nav aria-label="Primary navigation">
-      <a href="#about">About</a><a href="#research">Research</a><a href="#papers">Papers</a><a href="#background">Background</a>
-    </nav>
-  </div>
-</header>
+<header id="top"><div class="wrap topbar"><div class="identity"><a class="monogram" href="#top" aria-label="Shalini Sushri home">SS</a><div class="identity-copy"><strong>Shalini Sushri</strong><span>Georgia Tech</span></div></div><nav aria-label="Primary navigation"><a href="#about">About</a><a href="#research">Research</a><a href="#papers">Publications</a><a href="#background">Background</a><a href="#service">Service</a></nav></div></header>
 <main id="content">
   <div class="wrap intro" id="about">
-    <div>
-      <div class="nameblock">
-        <h1>Shalini Sushri</h1>
-        <p>Ph.D. Student, Computer Science</p>
-        <p>School of Interactive Computing</p>
-        <p>NSF CSGrad4US Fellow</p>
-      </div>
-      <div class="hero">
-        <div class="eyebrow">Interpretable machine learning</div>
-        <h2>Understanding what agents learn.</h2>
-        <p class="lead">I study how learned representations shape an agent’s decisions—and how to tell whether an agent has learned the requirements its behavior depends on.</p>
-        <p class="bodycopy">I am a Ph.D. student at Georgia Tech. My work brings together interpretable machine learning, structured policy representations, and hierarchical reinforcement learning. I am interested in extending these methods to vision-language-action models (VLAs) and embodied systems: understanding what foundation-model policies represent, how they use it, and when their decisions remain reliable.</p>
-      </div>
-    </div>
-    <aside class="aside">
-      <img class="portrait" src="profile.svg" alt="Shalini Sushri" />
-      <div class="quicklinks">
-        <a href="mailto:ssushri3@gatech.edu">ssushri3@gatech.edu</a>
-        <a href="https://scholar.google.com/scholar?q=%22Shalini+Sushri%22" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://openreview.net/profile?id=~Shalini_Sushri1" target="_blank" rel="noopener">OpenReview</a>
-        <a href="https://github.com/ssushri3" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/shalinisushri" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-      <div class="location">Atlanta, Georgia</div>
-    </aside>
+    <div><div class="nameblock"><h1>Shalini Sushri</h1><p>Ph.D. Student, Computer Science</p><p>School of Interactive Computing</p><p>NSF CSGrad4US Fellow</p></div><div class="hero"><div class="eyebrow">Interpretable machine learning</div><h2>Understanding what agents learn.</h2><p class="lead">I study how learned representations shape an agent’s decisions—and how to tell whether an agent has learned the requirements its behavior depends on.</p><p class="bodycopy">I am a Ph.D. student at Georgia Tech. My work brings together interpretable machine learning, structured policy representations, and hierarchical reinforcement learning. I am interested in extending these methods to vision-language-action models (VLAs) and embodied systems: understanding what foundation-model policies represent, how they use it, and when their decisions remain reliable.</p></div></div>
+    <aside class="aside"><img class="portrait" src="profile.svg" alt="Shalini Sushri" /><div class="quicklinks"><a href="mailto:ssushri3@gatech.edu">ssushri3@gatech.edu</a><a href="https://scholar.google.com/scholar?q=%22Shalini+Sushri%22" target="_blank" rel="noopener">Google Scholar</a><a href="https://openreview.net/profile?id=~Shalini_Sushri1" target="_blank" rel="noopener">OpenReview</a><a href="https://github.com/ssushri3" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/shalinisushri" target="_blank" rel="noopener">LinkedIn</a></div><div class="location">Atlanta, Georgia</div></aside>
   </div>
 
-  <section id="research">
-    <div class="wrap">
-      <div class="section-head"><div class="num">01</div><h2>Research interests</h2></div>
-      <div class="research-grid">
-        <article class="research-card"><div class="roman">I.</div><h3>Interpretable representations</h3><p>Concept bottlenecks, policy distillation, and tests of whether compact representations preserve the information needed for action.</p></article>
-        <article class="research-card"><div class="roman">II.</div><h3>Sequential decision-making</h3><p>Hierarchical reinforcement learning, skill preconditions, and the distinction between learned behavior and externally enforced constraints.</p></article>
-        <article class="research-card"><div class="roman">III.</div><h3>Vision-language-action models</h3><p>Interpretability and evaluation of VLAs, with an interest in transferring structured decision-making methods to foundation-model policies for embodied agents.</p></article>
-      </div>
-    </div>
-  </section>
+  <section id="research"><div class="wrap"><div class="section-head"><div class="num">01</div><h2>Research interests</h2></div><div class="research-grid"><article class="research-card"><div class="roman">I.</div><h3>Interpretable representations</h3><p>Concept bottlenecks, policy distillation, and tests of whether compact representations preserve the information needed for action.</p></article><article class="research-card"><div class="roman">II.</div><h3>Sequential decision-making</h3><p>Hierarchical reinforcement learning, skill preconditions, and the distinction between learned behavior and externally enforced constraints.</p></article><article class="research-card"><div class="roman">III.</div><h3>Vision-language-action models</h3><p>Interpretability and evaluation of VLAs, with an interest in transferring structured decision-making methods to foundation-model policies for embodied agents.</p></article></div></div></section>
 
-  <section id="papers">
-    <div class="wrap">
-      <div class="section-head"><div class="num">02</div><h2>Selected papers</h2></div>
-      <p class="section-sub">Manuscripts under review and published work.</p>
-      <div class="papers">
-        <article class="paper-row"><div class="paper-year">2026<span class="status">Under review</span></div><div class="paper-main"><h3>Hard Masks Hide What They Enforce: Do Hierarchical RL Managers Learn Option Preconditions or Merely Appear To?</h3><div class="authors">Shalini Sushri</div><p>Behavioral and causal tests separate learned option preconditions from reliance on hard masks, supporting per-option decisions about mask removal.</p></div><div class="paper-meta">AAAI 2027<br/>Special Track on AI Alignment</div></article>
-        <article class="paper-row"><div class="paper-year">2026<span class="status">Under review</span></div><div class="paper-main"><h3>PACE: Diagnosing Action Aliasing in Concept-Bottleneck Policies Before Retraining</h3><div class="authors">Shalini Sushri</div><p>A diagnostic for missing action-relevant distinctions in concept bottlenecks. The framework separates aliasing reduction, policy use, and realized repair after retraining.</p></div><div class="paper-meta">NeurIPS 2026<br/>Interpretability for Discovery Workshop</div></article>
-        <article class="paper-row"><div class="paper-year">2026<span class="status">Under review</span></div><div class="paper-main"><h3>Where Do Language Models Draw Color Boundaries? Evidence Across Languages, Models, and Measurements</h3><div class="authors">Shalini Sushri</div><p>An evaluation of language-specific color terms across five languages, examining how estimated boundaries depend on the model and measurement procedure.</p></div><div class="paper-meta">NeurIPS 2026<br/>Linguistic Principles for Foundation Models Workshop</div></article>
-        <article class="paper-row"><div class="paper-year">2024<span class="status">Published</span></div><div class="paper-main"><h3>Combining Cognitive and Generative AI for Self-Explanation in Interactive AI Agents</h3><div class="authors">Shalini Sushri, R. K. Dass, R. Basappa, H. Lu, and A. K. Goel</div><p>A hybrid symbolic–LLM approach to self-explanation in the VERA agent, evaluated with a 66-question benchmark.</p></div><div class="paper-meta">HEXED Workshop at EDM 2024<br/>CEUR Workshop Proceedings<a href="https://dilab.gatech.edu/dilab-papers-accepted-to-ls-and-edm/" target="_blank" rel="noopener">Paper</a></div></article>
-      </div>
-    </div>
-  </section>
+  <section id="papers"><div class="wrap"><div class="section-head"><div class="num">02</div><h2>Publications &amp; manuscripts</h2></div><p class="section-sub">Published work and current manuscripts under review.</p><div class="papers">
+    <article class="paper-row"><div class="paper-year">2026<span class="status">Under review</span></div><div class="paper-main"><h3>Hard Masks Hide What They Enforce: Do Hierarchical RL Managers Learn Option Preconditions or Merely Appear To?</h3><div class="authors">Shalini Sushri</div><p>Behavioral and causal tests separate learned option preconditions from reliance on hard masks, supporting per-option decisions about mask removal.</p></div><div class="paper-meta">AAAI 2027<br/>Special Track on AI Alignment</div></article>
+    <article class="paper-row"><div class="paper-year">2026<span class="status">Under review</span></div><div class="paper-main"><h3>PACE: Diagnosing Action Aliasing in Concept-Bottleneck Policies Before Retraining</h3><div class="authors">Shalini Sushri</div><p>A diagnostic for missing action-relevant distinctions in concept bottlenecks. The framework separates aliasing reduction, policy use, and realized repair after retraining.</p></div><div class="paper-meta">NeurIPS 2026<br/>Interpretability for Discovery Workshop</div></article>
+    <article class="paper-row"><div class="paper-year">2026<span class="status">Under review</span></div><div class="paper-main"><h3>Where Do Language Models Draw Color Boundaries? Evidence Across Languages, Models, and Measurements</h3><div class="authors">Shalini Sushri</div><p>An evaluation of language-specific color terms across five languages, examining how estimated boundaries depend on the model and measurement procedure.</p></div><div class="paper-meta">NeurIPS 2026<br/>Linguistic Principles for Foundation Models Workshop</div></article>
+    <article class="paper-row"><div class="paper-year">2024<span class="status">Published</span></div><div class="paper-main"><h3>Combining Cognitive and Generative AI for Self-Explanation in Interactive AI Agents</h3><div class="authors">Shalini Sushri, R. K. Dass, R. Basappa, H. Lu, and A. K. Goel</div><p>A hybrid symbolic–LLM approach to self-explanation in the VERA agent, evaluated with a 66-question benchmark.</p></div><div class="paper-meta">HEXED Workshop at EDM 2024<br/>CEUR Workshop Proceedings<a href="https://dilab.gatech.edu/dilab-papers-accepted-to-ls-and-edm/" target="_blank" rel="noopener">Paper</a></div></article>
+  </div></div></section>
 
-  <section id="background">
-    <div class="wrap">
-      <div class="section-head"><div class="num">03</div><h2>Background &amp; service</h2></div>
-      <div class="background">
-        <div>
-          <div class="group-title">Education</div>
-          <div class="entry"><strong>Georgia Institute of Technology</strong><p>Ph.D. in Computer Science</p><p>2023–present · Expected 2028</p><p>NSF CSGrad4US Fellow, 2023–2027</p><span class="gpa">GPA: 4.0 / 4.0</span>
-            <div class="coursework"><div class="group-title">Selected graduate coursework</div><div class="course-list"><span>CS 7641 · Machine Learning</span><span>CS 6476 · Computer Vision</span><span>CS 6515 · Graduate Algorithms</span><span>CS 7650 · Natural Language Processing</span><span>CS 7651 · Human &amp; Machine Learning</span><span>CSE 6643 · Numerical Linear Algebra</span><span>CS 7001 · Overview of Graduate Studies in Computing</span></div></div>
-          </div>
-          <div class="entry"><strong>University of Michigan Ross School of Business</strong><p>M.B.A. with Distinction</p></div>
-          <div class="entry"><strong>NIT Warangal</strong><p>B.S. in Computer Science Engineering</p><p>Top 5% of class</p></div>
-        </div>
-        <div>
-          <div class="group-title">Academic service</div>
-          <div class="entry"><strong>Program Committee Member</strong><p>AAAI 2026 AI Alignment Track</p></div>
-          <div class="entry"><strong>Reviewer</strong><p>NeurIPS 2026 LP4FM · Linguistic Principles for Foundation Models Workshop</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="background"><div class="wrap"><div class="section-head"><div class="num">03</div><h2>Background</h2></div><div class="background"><div><div class="group-title">Education</div><div class="entry"><strong>Georgia Institute of Technology</strong><p>Ph.D. in Computer Science</p><p>2023–present · Expected 2028</p><p>NSF CSGrad4US Fellow, 2023–2027</p><span class="gpa">GPA: 4.0 / 4.0</span><div class="coursework"><div class="group-title">Selected graduate coursework</div><div class="course-list"><span>CS 7641 · Machine Learning</span><span>CS 6476 · Computer Vision</span><span>CS 6515 · Graduate Algorithms</span><span>CS 7650 · Natural Language Processing</span><span>CS 7651 · Human &amp; Machine Learning</span><span>CSE 6643 · Numerical Linear Algebra</span><span>CS 7001 · Overview of Graduate Studies in Computing</span></div></div></div><div class="entry"><strong>University of Michigan Ross School of Business</strong><p>M.B.A. with Distinction</p></div><div class="entry"><strong>NIT Warangal</strong><p>B.S. in Computer Science Engineering</p><p>Top 5% of class</p></div></div></div></div></section>
+
+  <section id="service"><div class="wrap"><div class="section-head"><div class="num">04</div><h2>Academic service</h2></div><div class="service-grid"><div class="service-entry"><div class="group-title">Program committee</div><strong>Program Committee Member</strong><p>AAAI 2026 AI Alignment Track</p></div><div class="service-entry"><div class="group-title">Peer review</div><strong>Reviewer</strong><p>NeurIPS 2026 Workshop on Linguistic Principles for Foundation Models (LP4FM)</p></div></div></div></section>
 </main>
 <footer><div class="wrap foot"><span>Shalini Sushri · Updated September 2026</span><a class="back" href="#top">Back to top ↑</a></div></footer>
 </body>
