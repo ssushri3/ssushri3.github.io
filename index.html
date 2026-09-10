@@ -1,86 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shalini Sushri - Research</title>
-    <style>
-        /* Add your CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #4682B4;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
-        nav {
-            background-color: #999;
-            color: #fff;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav li {
-            display: inline;
-            margin: 10px;
-        }
-        .image {
-            float: left; /* Float the image to the left */
-            margin: 10px; /* Add some margin to create space between the image and text */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shalini Sushri | PhD Student, Georgia Tech</title>
+  <meta name="description" content="Academic website of Shalini Sushri, a Computer Science PhD student and NSF/CRA CSGrad4US Fellow at Georgia Tech working on interpretable and trustworthy machine learning, reinforcement learning, structured policies, and vision-language-action models." />
+  <meta name="author" content="Shalini Sushri" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ssushri3.github.io/" />
+  <meta property="og:title" content="Shalini Sushri | Georgia Tech Computer Science" />
+  <meta property="og:description" content="PhD researcher in interpretable and trustworthy machine learning, reinforcement learning, structured policies, and embodied AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ssushri3.github.io/" />
+  <meta property="og:image" content="https://ssushri3.github.io/IMG_2427.png" />
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5f6b7a;
+      --line: #e4e8ef;
+      --accent: #24558f;
+      --accent-soft: #edf4fb;
+      --page: #f7f9fc;
+      --card: #ffffff;
+      --max: 1040px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .shell { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(228,232,239,.95);
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(12px);
+    }
+    nav {
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .brand {
+      font-weight: 760;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      font-size: 1.02rem;
+    }
+    .navlinks { display: flex; gap: 24px; flex-wrap: wrap; font-size: .94rem; }
+    .navlinks a { color: #39465a; }
+    main { padding-bottom: 70px; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(235px, .8fr);
+      gap: 58px;
+      align-items: center;
+      padding: 84px 0 62px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 760;
+      font-size: .76rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 6vw, 4.6rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+      font-weight: 800;
+    }
+    .subtitle {
+      margin: 18px 0 0;
+      max-width: 700px;
+      font-size: 1.17rem;
+      color: #3d495b;
+    }
+    .hero p.bio { margin: 19px 0 0; max-width: 730px; color: var(--muted); }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 39px;
+      padding: 8px 14px;
+      border: 1px solid #cfd7e3;
+      border-radius: 999px;
+      background: #fff;
+      color: #27364d;
+      font-weight: 650;
+      font-size: .91rem;
+    }
+    .pill.primary { border-color: var(--accent); background: var(--accent); color: #fff; }
+    .portrait-wrap {
+      width: 100%;
+      max-width: 300px;
+      height: 360px;
+      justify-self: end;
+      overflow: hidden;
+      border-radius: 26px;
+      background: #dce7f1;
+      box-shadow: 0 22px 60px rgba(28, 49, 78, .16);
+    }
+    .portrait {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: 87% 45%;
+      transform: scale(1.12);
+    }
+    section { padding: 48px 0; border-top: 1px solid var(--line); }
+    .section-grid {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr);
+      gap: 54px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      letter-spacing: -.015em;
+    }
+    h3 { margin: 0 0 7px; font-size: 1.04rem; }
+    p { margin: 0 0 15px; }
+    .section-body { color: #364357; }
+    .research-list { display: grid; gap: 20px; }
+    .research-item {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      padding: 21px 22px;
+    }
+    .research-item p { margin: 0; color: var(--muted); }
+    .publication {
+      padding: 21px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .publication:first-child { padding-top: 0; }
+    .publication:last-child { border-bottom: 0; }
+    .venue { color: var(--accent); font-weight: 700; font-size: .9rem; }
+    .authors { color: var(--muted); margin-top: 5px; }
+    .courses-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+    .gpa {
+      font-weight: 760;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 999px;
+      padding: 5px 11px;
+      white-space: nowrap;
+      font-size: .91rem;
+    }
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px;
+    }
+    .course {
+      padding: 14px 15px;
+      border-radius: 12px;
+      background: var(--card);
+      border: 1px solid var(--line);
+    }
+    .code { display: block; font-weight: 760; color: #263a55; font-size: .87rem; margin-bottom: 2px; }
+    .course-name { color: var(--muted); font-size: .94rem; }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0 42px;
+      color: #6a7482;
+      font-size: .9rem;
+    }
+    @media (max-width: 760px) {
+      .navlinks { gap: 14px; }
+      .hero { grid-template-columns: 1fr; gap: 34px; padding-top: 58px; }
+      .portrait-wrap { justify-self: start; width: 230px; height: 280px; }
+      .section-grid { grid-template-columns: 1fr; gap: 20px; }
+      .course-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .shell { padding: 0 19px; }
+      nav { align-items: flex-start; flex-direction: column; padding: 15px 0; gap: 7px; }
+      .navlinks { font-size: .87rem; }
+      header { position: relative; }
+      .hero { padding-top: 42px; }
+      .courses-head { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shalini Sushri",
+    "url": "https://ssushri3.github.io/",
+    "image": "https://ssushri3.github.io/IMG_2427.png",
+    "jobTitle": "Computer Science PhD Student",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Georgia Institute of Technology"
+    },
+    "sameAs": [
+      "https://github.com/ssushri3"
+    ],
+    "knowsAbout": [
+      "Interpretable Machine Learning",
+      "Trustworthy AI",
+      "Reinforcement Learning",
+      "Structured Policy Representations",
+      "Vision-Language-Action Models",
+      "Embodied AI"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <header>
-        <h1>Shalini Sushri</h1>
-        <p>CSGrad4US (NSF and CRA) Fellow and CS PhD Student at the School of Computing, Georgia Tech</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-   
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="./IMG_2427.png" alt="Shalini Sushri" width="200">
-        <p>I am a CS PhD student at Georgia Tech and my advisor is Prof. Ashok Goel. I am also a CSGrad4US Fellow. This fellowship is jointly awarded by the National Science Foundation (NSF) and Computing Research Association (CRA). </p>
-        
-    </section>
+  <header>
+    <div class="shell">
+      <nav aria-label="Primary navigation">
+        <a class="brand" href="#top">Shalini Sushri</a>
+        <div class="navlinks">
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#coursework">Coursework</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-    <section id="research">
-        <h2>Research Projects</h2>
-        <p> My research interests can be summarized by the following research question: “How can we make AI machines think and learn as humans?”</p>
-        <p> My current research focus includes the following three areas: a) 'What' is AI agent's understanding of the user problem provided to them, b) 'How' do they solve the user problem based on their understanding of it, and c)'Why' do they provide a certain solution to a user problem as opposed to other solutions.</p>
-        <p> My research goal is to enable AI machines access to its own metacognition model that it can use to explain themselves to humans. This will mark a first step in increasing the transparency and trustworthiness of AI agents because when an agent is able to explain its actions, the user will be able to trust it more.</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>You can reach me at ssushri3@gatech.edu</p></p>
-        <p>Download my CV: <a href="your-cv.pdf" target="_blank">Curriculum Vitae</a></p>
-    </section>
+  <main id="top">
+    <div class="shell">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Georgia Tech · Computer Science</p>
+          <h1>Shalini Sushri</h1>
+          <p class="subtitle">PhD student in the School of Interactive Computing and NSF/CRA CSGrad4US Fellow.</p>
+          <p class="bio">
+            I work on interpretable and trustworthy machine learning for sequential decision-making. My research studies when compact, human-readable policy representations preserve the information an agent needs to act, and how structured representations can make learned behavior more verifiable. I am particularly interested in reinforcement learning, hierarchical policies, concept-based representations, and vision-language-action models for embodied agents.
+          </p>
+          <div class="links">
+            <a class="pill primary" href="mailto:ssushri3@gatech.edu">Email</a>
+            <a class="pill" href="https://github.com/ssushri3" target="_blank" rel="noopener">GitHub</a>
+            <a class="pill" href="https://scholar.google.com/scholar?q=%22Shalini+Sushri%22" target="_blank" rel="noopener">Google Scholar</a>
+          </div>
+        </div>
+        <div class="portrait-wrap" aria-label="Portrait of Shalini Sushri">
+          <img class="portrait" src="IMG_2427.png" alt="Shalini Sushri" />
+        </div>
+      </div>
 
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li>Publication 1: To be added soon!</li>
-            <li>Publication 2: To be added soon!</li>
-            <!-- Add more publications as needed -->
-        </ul>
-    </section>
+      <section id="research">
+        <div class="section-grid">
+          <h2>Research</h2>
+          <div class="section-body research-list">
+            <article class="research-item">
+              <h3>Interpretable &amp; Trustworthy Sequential Decision-Making</h3>
+              <p>Methods for determining whether learned policies encode decision-relevant concepts, constraints, and structure rather than relying on opaque or externally scaffolded behavior.</p>
+            </article>
+            <article class="research-item">
+              <h3>Structured Policy Representations</h3>
+              <p>Concept bottlenecks, decision trees, skill hierarchies, and other compact representations that expose how a policy organizes and uses information while preserving task performance.</p>
+            </article>
+            <article class="research-item">
+              <h3>Embodied AI &amp; Vision-Language-Action Models</h3>
+              <p>Interpretability and safety questions for embodied policies, including how learned representations and external constraints interact in long-horizon robot decision-making.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>You can reach me at ssushri3@gatech dot edu</p>
-        <p>My office is on the second floor of the TSRB and I work in the Design and Intelligence Lab or DILAB for yellow jackets! </p>
-    </section>
+      <section id="publications">
+        <div class="section-grid">
+          <h2>Publications</h2>
+          <div class="section-body">
+            <article class="publication">
+              <div class="venue">HEXED Workshop @ EDM 2024</div>
+              <h3><a href="https://dilab.gatech.edu/dilab-papers-accepted-to-ls-and-edm/" target="_blank" rel="noopener">Combining Cognitive and Generative AI for Self-explanation in Interactive AI Agents</a></h3>
+              <div class="authors"><strong>Shalini Sushri</strong>, Rahul K. Dass, Rhea Basappa, Hong Lu, Ashok K. Goel</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="coursework">
+        <div class="section-grid">
+          <h2>Coursework</h2>
+          <div class="section-body">
+            <div class="courses-head">
+              <div>Selected graduate coursework at Georgia Tech</div>
+              <div class="gpa">GPA: 4.0 / 4.0</div>
+            </div>
+            <div class="course-grid">
+              <div class="course"><span class="code">CSE 6643</span><span class="course-name">Numerical Linear Algebra</span></div>
+              <div class="course"><span class="code">CS 7650</span><span class="course-name">Natural Language</span></div>
+              <div class="course"><span class="code">CS 7651</span><span class="course-name">Human and Machine Learning</span></div>
+              <div class="course"><span class="code">CS 7641</span><span class="course-name">Machine Learning</span></div>
+              <div class="course"><span class="code">CS 6515</span><span class="course-name">Introduction to Graduate Algorithms</span></div>
+              <div class="course"><span class="code">CS 6476</span><span class="course-name">Introduction to Computer Vision</span></div>
+              <div class="course"><span class="code">CS 7001</span><span class="course-name">Overview of Graduate Studies in Computing</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-grid">
+          <h2>Contact</h2>
+          <div class="section-body">
+            <p><strong>Shalini Sushri</strong><br />School of Interactive Computing<br />Georgia Institute of Technology</p>
+            <p><a href="mailto:ssushri3@gatech.edu">ssushri3@gatech.edu</a></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="shell">© 2026 Shalini Sushri · Georgia Institute of Technology</div>
+  </footer>
 </body>
 </html>
